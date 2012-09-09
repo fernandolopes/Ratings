@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3817179915FC491100DCE471 /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817179815FC491100DCE471 /* PlayerDetailsViewController.m */; };
+		3817179D15FCCC9000DCE471 /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3817179C15FCCC9000DCE471 /* GamePickerViewController.m */; };
 		383FD12115DBD65C0002915D /* 1Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 383FD10915DBD65C0002915D /* 1Star.png */; };
 		383FD12215DBD65C0002915D /* 1Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 383FD10A15DBD65C0002915D /* 1Star@2x.png */; };
 		383FD12315DBD65C0002915D /* 1StarSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 383FD10B15DBD65C0002915D /* 1StarSmall.png */; };
@@ -45,6 +47,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3817179715FC491100DCE471 /* PlayerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailsViewController.h; sourceTree = "<group>"; };
+		3817179815FC491100DCE471 /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
+		3817179B15FCCC9000DCE471 /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
+		3817179C15FCCC9000DCE471 /* GamePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
 		383FD10915DBD65C0002915D /* 1Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1Star.png; sourceTree = "<group>"; };
 		383FD10A15DBD65C0002915D /* 1Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1Star@2x.png"; sourceTree = "<group>"; };
 		383FD10B15DBD65C0002915D /* 1StarSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1StarSmall.png; sourceTree = "<group>"; };
@@ -172,6 +178,10 @@
 				38CC442A15D9D95C00E029B1 /* AppDelegate.h */,
 				38CC442B15D9D95C00E029B1 /* AppDelegate.m */,
 				38CC442D15D9D95C00E029B1 /* MainStoryboard_iPhone.storyboard */,
+				3817179B15FCCC9000DCE471 /* GamePickerViewController.h */,
+				3817179C15FCCC9000DCE471 /* GamePickerViewController.m */,
+				3817179715FC491100DCE471 /* PlayerDetailsViewController.h */,
+				3817179815FC491100DCE471 /* PlayerDetailsViewController.m */,
 				38CC443315D9D95C00E029B1 /* ViewController.h */,
 				38CC443415D9D95C00E029B1 /* ViewController.m */,
 				38CC442215D9D95C00E029B1 /* Supporting Files */,
@@ -286,6 +296,8 @@
 				383FD13F15DC64960002915D /* Player.m in Sources */,
 				383FD14515DC75B60002915D /* PlayersViewController.m in Sources */,
 				383FD14815DC9D030002915D /* PlayerCell.m in Sources */,
+				3817179915FC491100DCE471 /* PlayerDetailsViewController.m in Sources */,
+				3817179D15FCCC9000DCE471 /* GamePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +345,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -354,7 +366,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,7 +380,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ratings/Ratings-Prefix.pch";
 				INFOPLIST_FILE = "Ratings/Ratings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -381,7 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ratings/Ratings-Prefix.pch";
 				INFOPLIST_FILE = "Ratings/Ratings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

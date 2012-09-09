@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Vad-ms-CYa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Vad-ms-CYa">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
@@ -51,10 +51,161 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Jogadores" id="osP-el-oEN"/>
+                    <navigationItem key="navigationItem" title="Jogadores" id="osP-el-oEN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zMW-gS-RuT">
+                            <connections>
+                                <segue destination="3Xd-Dm-WH3" kind="modal" identifier="AddPlayer" modalTransitionStyle="flipHorizontal" id="6mH-yN-RiF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="354" y="-704"/>
+        </scene>
+        <!--Player Details View Controller - Novo Jogador-->
+        <scene sceneID="chK-Vj-GmW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="duL-ha-vZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="35J-x5-L06" customClass="PlayerDetailsViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="bpj-5v-q24">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Nome do Jogador" id="kFr-sH-sKx">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VPk-jI-PhX">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="fwv-JS-DMs">
+                                                    <rect key="frame" x="8" y="6" width="286" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <action selector="texto:" destination="35J-x5-L06" eventType="editingChanged" id="FoN-Kd-pbR"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="KP7-aK-WdY">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="nal-9Y-zDz" detailTextLabel="0sq-mY-Sgv" style="IBUITableViewCellStyleValue1" id="5BW-kZ-bMJ">
+                                        <rect key="frame" x="0.0" y="112" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Jogo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nal-9Y-zDz">
+                                                    <rect key="frame" x="10" y="11" width="41" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" text="Detalhe" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0sq-mY-Sgv">
+                                                    <rect key="frame" x="211" y="11" width="59" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <accessibility key="accessibilityConfiguration" label="detailLabel"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.2196078431372549" green="0.32941176470588235" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="12a-BN-p8J" kind="push" identifier="PickGame" id="pmN-9y-kqk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Novo Jogador" id="4vR-gg-VrK">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="AY4-Xe-fZc">
+                            <connections>
+                                <action selector="cancel:" destination="35J-x5-L06" id="1a2-E3-dj5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Concluído" id="FJm-re-FdX">
+                            <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="done:" destination="35J-x5-L06" id="TZ9-vD-z22"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="concluido" destination="FJm-re-FdX" id="BwT-6o-JV8"/>
+                        <outlet property="detailLabel" destination="0sq-mY-Sgv" id="lb8-8e-M72"/>
+                        <outlet property="nameTextField" destination="fwv-JS-DMs" id="Ghp-Sc-gYV"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1588" y="-1089"/>
+        </scene>
+        <!--Game Picker View Controller - Escolher Jogo-->
+        <scene sceneID="x9E-Ou-RBi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICT-Qr-hI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="12a-BN-p8J" customClass="GamePickerViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3V2-du-FaM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" textLabel="qnp-RR-R0c" style="IBUITableViewCellStyleDefault" id="BZE-9E-e0z">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qnp-RR-R0c">
+                                            <rect key="frame" x="10" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="12a-BN-p8J" id="bxY-sQ-mTH"/>
+                            <outlet property="delegate" destination="12a-BN-p8J" id="v1k-l1-h5o"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Escolher Jogo" id="PKH-ZB-jJn"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="2052" y="-1088"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dru-ce-2dJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEL-Nt-BrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="3Xd-Dm-WH3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UOg-PO-HLQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="35J-x5-L06" kind="relationship" relationship="rootViewController" id="sGf-Xr-V1v"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-1089"/>
         </scene>
         <!--Navigation Controller - Jogadores-->
         <scene sceneID="dfW-av-POP">
@@ -91,7 +242,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" image="Gestures.png" id="pR9-VX-IB1"/>
+                    <tabBarItem key="tabBarItem" title="Gestos" image="Gestures.png" id="pR9-VX-IB1"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-138" y="-35"/>
@@ -121,12 +272,26 @@
         <image name="Players.png" width="30" height="30"/>
     </resources>
     <classes>
+        <class className="GamePickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GamePickerViewController.h"/>
+        </class>
         <class className="PlayerCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="ratingImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="PlayerDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="action" name="texto:"/>
+                <relationship kind="outlet" name="concluido" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="detailLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="PlayersViewController" superclassName="UITableViewController">
